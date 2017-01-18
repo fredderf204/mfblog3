@@ -1,4 +1,7 @@
 node {
+    stage('source'){
+        checkout scm
+    }
     stage('build'){
         bat 'if exist public rmdir public /s /Q'
         bat 'hugo --baseURL http://b.mfriedrich.cloud/staging/ --uglyURLs'
