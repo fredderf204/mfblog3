@@ -31,7 +31,7 @@ module.exports = function (grunt) {
                 files : { 
                     'public/' : 'public/*.html', 
                     'public/page/' : 'public/page/*.html', 
-                    'public/tags/' : 'pubic/tags/*.html', 
+                    'public/tags/' : 'public/tags/*.html', 
                     'public/2017/01/02/' : 'public/2017/01/02/*.html', 
                     'public/2017/01/11/' : 'public/2017/01/11/*.html' 
                 }, 
@@ -65,7 +65,7 @@ module.exports = function (grunt) {
                     },
                     {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service"',
-                        replacement: '<a href="http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html"'
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html"'
                     },
                     {
                         pattern: '<a href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service">',
