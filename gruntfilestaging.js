@@ -102,7 +102,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
  
     // Default task(s). 
-    grunt.registerTask('default', ['copy:backup', 'clean:public', 'exec:hugobuild', 'htmlmin', 'string-replace:badlinks']); 
+    grunt.registerTask('default', ['htmlmin:dist', 'string-replace:badlinks']); 
  
 }; 
 
