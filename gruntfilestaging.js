@@ -76,7 +76,7 @@ module.exports = function (grunt) {
                     },
                     {
                         pattern: '[\s]+<a href="(http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service)"',
-                        replacement: 'http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html'
+                        replacement: '"$1".html'
                     },
                     {
                         //tags
