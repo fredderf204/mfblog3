@@ -25,6 +25,22 @@ module.exports = function (grunt) {
                 command: 'hugo' 
             } 
         }, 
+        //html min
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'public/' : 'public/*.html', 
+                    'public/page/' : 'public/page/*.html', 
+                    'public/tags/' : 'public/tags/*.html', 
+                    'public/2017/01/02/' : 'public/2017/01/02/*.html', 
+                    'public/2017/01/11/' : 'public/2017/01/11/*.html' 
+                }
+            }
+        },
         //string replace bad links 
         'string-replace': { 
             badlinks : { 
@@ -42,35 +58,22 @@ module.exports = function (grunt) {
                         replacement: '<a href="http://mfblog3.blob.core.windows.net/staging/index.html"' 
                     }, 
                     { 
-                        //scripts (add async)
-                        pattern: '<script src="http:\/\/mfblog3.blob.core.windows.net\/staging\/fancybox\/jquery.fancybox.pack.js"><\/script>', 
-                        replacement: '<script src="http://mfblog3.blob.core.windows.net/staging/fancybox/jquery.fancybox.pack.js" async></script>' 
-                    }, 
-                    { 
-                        pattern: '<script src="http:\/\/mfblog3.blob.core.windows.net\/staging\/js\/script.js"><\/script>', 
-                        replacement: '<script src="http://mfblog3.blob.core.windows.net/staging/js/script.js" async></script>' 
-                    }, 
-                    { 
-                        pattern: '<script src="https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/highlight.js\/8.8.0\/highlight.min.js"><\/script>', 
-                        replacement: '<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js" async></script>' 
-                    }, 
-                    { 
-                        pattern: '<script src="https:\/\/cdn.mathjax.org\/mathjax\/latest\/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>', 
-                        replacement: '<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>' 
-                    }, 
-                    { 
                         //blog articles
                         pattern: '<a href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/02\/starting-a-blog"', 
                         replacement: '<a href="http://mfblog3.blob.core.windows.net/staging/2017/01/02/starting-a-blog.html"' 
                     },
-                    {
-                        pattern: '[\s\w<]+href="(http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service)"[\s\w="<>\/]+',
-                        replacement: 'http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html'
+                    { 
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/02\/starting-a-blog"', 
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/02/starting-a-blog.html"' 
                     },
-                    //{
-                        //pattern: '<a href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service">',
-                        //replacement: '<a href="http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html">'
-                    //},
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html"'
+                    },
+                    {
+                        pattern: '<a href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service">',
+                        replacement: '<a href="http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html">'
+                    },
                     {
                         //tags
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/app-service"',
@@ -96,9 +99,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-exec'); 
     //grunt.loadNpmTasks('grunt-processhtml') 
     grunt.loadNpmTasks('grunt-string-replace'); 
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
  
     // Default task(s). 
-    grunt.registerTask('default', ['copy:backup', 'clean:public', 'exec:hugobuild', 'string-replace:badlinks']); 
+    grunt.registerTask('default', ['copy:backup', 'clean:public', 'exec:hugobuild', 'htmlmin', 'string-replace:badlinks']); 
  
 }; 
 
