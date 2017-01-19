@@ -84,13 +84,25 @@ module.exports = function (grunt) {
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/app-service.html"'
                     },
                     {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/app-service"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/app-service.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/azure"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/azure.html"'
+                    },
+                    {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/azure"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/azure.html"'
                     },
                     {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/jenkins"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/jenkins.html"'
-                    } 
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/jenkins"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/jenkins.html"'
+                    }  
                     ] 
                 } 
             } 
