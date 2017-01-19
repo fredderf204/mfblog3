@@ -67,16 +67,16 @@ module.exports = function (grunt) {
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/02/starting-a-blog.html"' 
                     },
                     {
-                        pattern: '[\s]+<a href="(http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service)"',
-                        replacement: 'http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html'
-                    },
-                    {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html"'
                     },
                     {
                         pattern: '<a href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service">',
                         replacement: '<a href="http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html">'
+                    },
+                    {
+                        pattern: '[\s]+<a href="(http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service)"',
+                        replacement: 'http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html'
                     },
                     {
                         //tags
