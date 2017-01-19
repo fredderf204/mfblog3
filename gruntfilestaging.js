@@ -38,17 +38,17 @@ module.exports = function (grunt) {
                 options: { 
                     replacements: [{ 
                         //baseurl
-                        pattern: '<a href="http:\/\/b.mfriedrich.cloud\/staging\/"', 
-                        replacement: '<a href="http://b.mfriedrich.cloud/staging/index.html"' 
+                        pattern: '<a href="http:\/\/mfblog3.blob.core.windows.net\/staging\/"', 
+                        replacement: '<a href="http://mfblog3.blob.core.windows.net/staging/index.html"' 
                     }, 
                     { 
                         //scripts (add async)
-                        pattern: '<script src="http:\/\/b.mfriedrich.cloud\/staging\/fancybox\/jquery.fancybox.pack.js"><\/script>', 
-                        replacement: '<script src="http://b.mfriedrich.cloud/staging/fancybox/jquery.fancybox.pack.js" async></script>' 
+                        pattern: '<script src="http:\/\/mfblog3.blob.core.windows.net\/staging\/fancybox\/jquery.fancybox.pack.js"><\/script>', 
+                        replacement: '<script src="http://mfblog3.blob.core.windows.net/staging/fancybox/jquery.fancybox.pack.js" async></script>' 
                     }, 
                     { 
-                        pattern: '<script src="http:\/\/b.mfriedrich.cloud\/staging\/js\/script.js"><\/script>', 
-                        replacement: '<script src="http://b.mfriedrich.cloud/staging/js/script.js" async></script>' 
+                        pattern: '<script src="http:\/\/mfblog3.blob.core.windows.net\/staging\/js\/script.js"><\/script>', 
+                        replacement: '<script src="http://mfblog3.blob.core.windows.net/staging/js/script.js" async></script>' 
                     }, 
                     { 
                         pattern: '<script src="https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/highlight.js\/8.8.0\/highlight.min.js"><\/script>', 
@@ -60,25 +60,25 @@ module.exports = function (grunt) {
                     }, 
                     { 
                         //blog articles
-                        pattern: '<a href="http:\/\/b.mfriedrich.cloud\/staging\/2017\/01\/02\/starting-a-blog"', 
-                        replacement: '<a href="http://b.mfriedrich.cloud/staging/2017/01/02/starting-a-blog.html"' 
+                        pattern: '<a href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/02\/starting-a-blog"', 
+                        replacement: '<a href="http://mfblog3.blob.core.windows.net/staging/2017/01/02/starting-a-blog.html"' 
                     },
                     {
-                        pattern: '<a href="http:\/\/b.mfriedrich.cloud\/staging\/2017\/01\/11\/jenkins-on-azure-app-service"',
-                        replacement: '<a href="http://b.mfriedrich.cloud/staging/2017/01/11/jenkins-on-azure-app-service.html"'
+                        pattern: '<a href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service"',
+                        replacement: '<a href="http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html"'
                     },
                     {
                         //tags
-                        pattern: 'href="http:\/\/b.mfriedrich.cloud\/staging\/tags\/app-service"',
-                        replacement: 'href="http://b.mfriedrich.cloud/staging/tags/app-service.html"'
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/app-service"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/app-service.html"'
                     },
                     {
-                        pattern: 'href="http:\/\/b.mfriedrich.cloud\/staging\/tags\/azure"',
-                        replacement: 'href="http://b.mfriedrich.cloud/staging/tags/azure.html"'
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/azure"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/azure.html"'
                     },
                     {
-                        pattern: 'href="http:\/\/b.mfriedrich.cloud\/staging\/tags\/jenkins"',
-                        replacement: 'href="http://b.mfriedrich.cloud/staging/tags/jenkins.html"'
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/jenkins"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/jenkins.html"'
                     } 
                     ] 
                 } 
