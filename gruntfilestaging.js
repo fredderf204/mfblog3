@@ -45,11 +45,11 @@ module.exports = function (grunt) {
         'string-replace': { 
             badlinks : { 
                 files : { 
-                    'public/' : 'public/*.html', 
-                    'public/page/' : 'public/page/*.html', 
-                    'public/tags/' : 'public/tags/*.html', 
-                    'public/2017/01/02/' : 'public/2017/01/02/*.html', 
-                    'public/2017/01/11/' : 'public/2017/01/11/*.html' 
+                    'public/**' : 'public/*.html', 
+                    'public/page/**' : 'public/page/*.html', 
+                    'public/tags/**' : 'public/tags/*.html', 
+                    'public/2017/01/02/**' : 'public/2017/01/02/*.html', 
+                    'public/2017/01/11/**' : 'public/2017/01/11/*.html' 
                 }, 
                 options: { 
                     replacements: [{ 
