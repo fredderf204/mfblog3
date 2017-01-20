@@ -58,25 +58,38 @@ module.exports = function (grunt) {
                         replacement: '<a href="http://mfblog3.blob.core.windows.net/staging/index.html"' 
                     }, 
                     { 
-                        //blog articles
-                        pattern: '<a href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/02\/starting-a-blog"', 
-                        replacement: '<a href="http://mfblog3.blob.core.windows.net/staging/2017/01/02/starting-a-blog.html"' 
+                        //starting-a-blog
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/02\/starting-a-blog"', 
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/02/starting-a-blog.html"' 
+                    },
+                    { 
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/02\/starting-a-blog"', 
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/02/starting-a-blog.html"' 
+                    },
+                    { 
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/02\/starting-a-blog"', 
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/02/starting-a-blog.html"' 
                     },
                     { 
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/02\/starting-a-blog"', 
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/02/starting-a-blog.html"' 
                     },
                     {
+                        //Jenkins-on-azure-app-service
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html"'
                     },
                     {
-                        pattern: '<a href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service">',
-                        replacement: '<a href="http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html">'
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html"'
                     },
                     {
-                        pattern: '[\s]+<a href="(http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service)"',
-                        replacement: '"$1".html'
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/11\/jenkins-on-azure-app-service"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/11/jenkins-on-azure-app-service.html"'
                     },
                     {
                         //tags
