@@ -53,7 +53,7 @@ The main configuration of your Hugo site is ……… the config file. These fil
 
 :bulb: Your baseurl needs to include the trailing slash. I.e. for this blog, my baseurl is `http://b.mfriedrich.cloud/blog/`
 
-:bulb: Azure BLOB storage allows for custom domains. If you would like to use a customer domain, you need to make sure your baseural matches this custom domain. I will go through this in a later section.
+:bulb: Azure BLOB storage allows for custom domains. If you would like to use a custom domain, you need to make sure your baseural matches this custom domain. I will go through this in a later section.
 
 :bulb: If you are using a menu for your blog, make sure the links go to a ***.html page**. Please see below for my params.menu config;
 
@@ -83,11 +83,11 @@ Once you have created some content, you will need to generate your public folder
 
 :bulb: `--ulgyURLs` in needed so it will append index.html to the files being created. You could also add `uglyurls = true` to your config file instead.
 
-Now you find a new folder created in your project called **public**. The contents of this folder are what we will be uploading to Azure BLOB storage. Now,  we need to make a few adjustments to make all of the links work in your newly created html files.
+Now you will find a new folder created in your project called **public**. The contents of this folder are what we will be uploading to Azure BLOB storage. Now,  we need to make a few adjustments to make all of the links work in your newly created html files.
 
 Depending on your theme and the html that has been created, you will need to fix the links to your content. For example, on this blog in the main index.html page, I needed to update the links to each post and change http://b.mfriedrich.cloud/blog/2017/01/02/starting-a-blog to http://b.mfriedrich.cloud/blog/2017/01/02/starting-a-blog.html. (I used find and replace in my IDE)
 
-I am going to automate this process in the future and will write another blog post about it :pencil2:
+:pencil2: I am going to automate this process in the future and will write another blog post about it :pencil2:
 
 Now once you have fixed up all of the links in your html files (of which you may have a few), your static web site is ready to be uploaded to Azure BLOB Storage
 
