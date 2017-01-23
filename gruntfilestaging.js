@@ -102,7 +102,24 @@ module.exports = function (grunt) {
                     },
                     {
                         //hugo-in-azure-blog-storage
-
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/21\/hugo-in-azure-blob-storage"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/21/hugo-in-azure-blog-storage.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/21\/hugo-in-azure-blob-storage"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/21/hugo-in-azure-blog-storage.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/21\/hugo-in-azure-blob-storage"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/21/hugo-in-azure-blog-storage.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/21\/hugo-in-azure-blob-storage"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/21/hugo-in-azure-blog-storage.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/01\/21\/hugo-in-azure-blob-storage"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/21/hugo-in-azure-blog-storage.html"'
                     },
                     {
                         //tags
