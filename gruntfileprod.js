@@ -139,6 +139,10 @@ module.exports = function (grunt) {
                         replacement: 'href="http://b.mfriedrich.cloud/blog/tags/azure.html"'
                     },
                     {
+                        pattern: 'href="http:\/\/b.mfriedrich.cloud\/blog\/tags\/azure"',
+                        replacement: 'href="http://b.mfriedrich.cloud/blog/tags/azure.html"'
+                    },
+                    {
                         pattern: 'href="http:\/\/b.mfriedrich.cloud\/blog\/tags\/blob"',
                         replacement: 'href="http://b.mfriedrich.cloud/blog/tags/blob.html"'
                     },

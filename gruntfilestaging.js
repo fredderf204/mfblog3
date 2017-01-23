@@ -139,6 +139,10 @@ module.exports = function (grunt) {
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/azure.html"'
                     },
                     {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/azure"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/azure.html"'
+                    },
+                    {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/blob"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/blob.html"'
                     },
