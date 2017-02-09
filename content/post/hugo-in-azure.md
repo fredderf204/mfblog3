@@ -143,3 +143,5 @@ Now your Hugo site will be accessible via a direct link. I.e. http://b.mfriedric
 But what is you want your user base to access your site via a more friendly link :question::question::question:
 
 As the sub heading suggests, you can use a domain redirect/domain forward. For this blog, I wanted my user base to access it via http://blog.mfriedrich.cloud, therefore I created a domain redirect/domain forward from blog.mfriedrich.cloud to http://b.mfriedrich.cloud/blog/index.html
+
+:speech_balloon: *I am employed by Microsoft; however, the opinions and views expressed here are my own and do not necessarily reflect those of my employer.*

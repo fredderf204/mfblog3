@@ -122,6 +122,27 @@ module.exports = function (grunt) {
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/2017/01/21/hugo-in-azure-blob-storage.html"'
                     },
                     {
+                        //microsoft-ignite-next-week
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/09\/microsoft-ignite-next-week"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/09\/microsoft-ignite-next-week.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/09\/microsoft-ignite-next-week"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/09\/microsoft-ignite-next-week.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/09\/microsoft-ignite-next-week"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/09\/microsoft-ignite-next-week.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/09\/microsoft-ignite-next-week"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/09\/microsoft-ignite-next-week.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/09\/microsoft-ignite-next-week"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/09\/microsoft-ignite-next-week.html"'
+                    },
+                    {
                         //tags
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/app-service"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/app-service.html"'
