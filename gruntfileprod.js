@@ -50,7 +50,8 @@ module.exports = function (grunt) {
                     'public/tags/' : 'public/tags/*.html', 
                     'public/2017/01/02/' : 'public/2017/01/02/*.html', 
                     'public/2017/01/11/' : 'public/2017/01/11/*.html', 
-                    'public/2017/01/21/' : 'public/2017/01/21/*.html'
+                    'public/2017/01/21/' : 'public/2017/01/21/*.html',
+                    'public/2017/02/09/' : 'public/2017/02/09/*.html'
                 }, 
                 options: { 
                     replacements: [{ 
