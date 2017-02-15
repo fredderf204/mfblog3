@@ -51,7 +51,8 @@ module.exports = function (grunt) {
                     'public/2017/01/02/' : 'public/2017/01/02/*.html', 
                     'public/2017/01/11/' : 'public/2017/01/11/*.html', 
                     'public/2017/01/21/' : 'public/2017/01/21/*.html',
-                    'public/2017/02/09/' : 'public/2017/02/09/*.html'
+                    'public/2017/02/09/' : 'public/2017/02/09/*.html',
+                    'public/2017/02/13/' : 'public/2017/02/13/*.html'
                 }, 
                 options: { 
                     replacements: [{ 
@@ -142,6 +143,27 @@ module.exports = function (grunt) {
                     {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/09\/microsoft-ignite-next-week"',
                         replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/09\/microsoft-ignite-next-week.html"'
+                    },
+                    {
+                        //live-demo
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/13\/live-demo"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/13\/live-demo.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/13\/live-demo"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/13\/live-demo.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/13\/live-demo"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/13\/live-demo.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/13\/live-demo"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/13\/live-demo.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/13\/live-demo"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/13\/live-demo.html"'
                     },
                     {
                         //tags
