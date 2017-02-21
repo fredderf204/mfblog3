@@ -101,7 +101,7 @@ If you would like to use a custom domain for you storage account, you can find i
 
 :bulb: Also on your newly created container, you need to set the public access level to **public read access for container and blobs**
 
-![figure 1 - configure container](/blog/img/hugoazure1.PNG)
+![figure 1 - configure container](http://mfblog.azureedge.net/img/hugoazure1.PNG)
 
 Upload to Azure Blob Storage
 ---
