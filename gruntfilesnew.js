@@ -57,7 +57,7 @@ module.exports = function (grunt) {
                 options: { 
                     replacements: [{ 
                         //baseurl
-                        pattern: '<a href="http:\/\/mfblog.azureedge.net"', 
+                        pattern: '<a href="http:\/\/mfblog.azureedge.net\/"', 
                         replacement: '<a href="http://mfblog.azureedge.net/index.html"' 
                     }, 
                     { 
