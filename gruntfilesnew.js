@@ -58,7 +58,7 @@ module.exports = function (grunt) {
                 options: { 
                     replacements: [{ 
                         //baseurl
-                        pattern: '<a href="http:\/\/cdn.mfriedrich.cloud/\/"', 
+                        pattern: '<a href="http:\/\/cdn.mfriedrich.cloud\/"', 
                         replacement: '<a href="http://cdn.mfriedrich.cloud/index.html"' 
                     }, 
                     { 
