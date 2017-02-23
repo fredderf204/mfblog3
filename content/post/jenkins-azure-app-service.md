@@ -25,14 +25,14 @@ There is a good article [here](https://docs.microsoft.com/en-us/azure/app-servic
 
 - When creating the Web App, click on the configure container option
 
-![figure 1 - configure container](http://mfblog.azureedge.net/img/jenk1.png)
+![figure 1 - configure container](http://cdn.mfriedrich.cloud/img/jenk1.png)
 
 - Then click on Docker Hub and in the Image and optional tag section type in; `jenkinsci/jenkins`
 - Click OK then Create
 
 Now our Web App with Jenkins is going to be deployed, but we still have one issue. The main port Jenkins listens on is 8080 and Web Apps running in Azure App Service only respond to requests on ports 80 and 443. To fix this, go to the application settings of our Jenkins Web App and create a new App settings entry with key PORT and value 8080.
 
-![figure 2 - custom port](http://mfblog.azureedge.net/img/jenk2.png)
+![figure 2 - custom port](http://cdn.mfriedrich.cloud/img/jenk2.png)
 
 Click on Save and after a few seconds, your new Jenkins Web App will be up running and listening on port 80.
 

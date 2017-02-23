@@ -2,8 +2,8 @@
 title = "Live Demo!"
 banner = "img/ignitedemoban.png"
 images = []
-tags = []
-categories = []
+tags = ["Ignite"]
+keywords = ["Azure", "Ignite", "Australia", "demo"]
 description = ""
 date = "2017-02-13T16:56:41+11:00"
 
@@ -19,7 +19,7 @@ The demo includes a Jenkins Pipeline that;
 4. Pauses to allow me to view my staged deployment to make sure everything is ok
 5. After I have approved the staged deployment, it pushes my content to my production container in Azure Blob Storage
 
-![figure 1 - overview](http://mfblog.azureedge.net/img/ignitedemo1.png)
+![figure 1 - overview](http://cdn.mfriedrich.cloud/img/ignitedemo1.png)
 
 The point I am trying to make with this demo is that once you a well established Delivery Pipeline, you should have confidence to push to production often :thumbsup:
 
