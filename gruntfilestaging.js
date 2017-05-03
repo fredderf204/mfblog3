@@ -52,7 +52,8 @@ module.exports = function (grunt) {
                     'public/2017/01/11/' : 'public/2017/01/11/*.html', 
                     'public/2017/01/21/' : 'public/2017/01/21/*.html',
                     'public/2017/02/09/' : 'public/2017/02/09/*.html',
-                    'public/2017/02/13/' : 'public/2017/02/13/*.html'
+                    'public/2017/02/13/' : 'public/2017/02/13/*.html',
+                    'public/2017/05/01/' : 'public/2017/05/01/*.html'
                 }, 
                 options: { 
                     replacements: [{ 
@@ -166,6 +167,27 @@ module.exports = function (grunt) {
                         replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/13\/live-demo.html"'
                     },
                     {
+                        //getting started with Terraform
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/05\/01\/getting-started-with-terraform-on-azure"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/05\/01\/getting-started-with-terraform-on-azure.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/05\/01\/getting-started-with-terraform-on-azure"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/05\/01\/getting-started-with-terraform-on-azure.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/05\/01\/getting-started-with-terraform-on-azure"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/05\/01\/getting-started-with-terraform-on-azure.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/05\/01\/getting-started-with-terraform-on-azure"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/05\/01\/getting-started-with-terraform-on-azure.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/05\/01\/getting-started-with-terraform-on-azure"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/05\/01\/getting-started-with-terraform-on-azure.html"'
+                    },
+                    {
                         //tags
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/app-service"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/app-service.html"'
@@ -187,6 +209,10 @@ module.exports = function (grunt) {
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/azure.html"'
                     },
                     {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/azure"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/azure.html"'
+                    },
+                    {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/blob"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/blob.html"'
                     },
@@ -203,12 +229,36 @@ module.exports = function (grunt) {
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/hugo.html"'
                     },
                     {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/ignite"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/ignite.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/ignite"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/ignite.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/ignite"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/ignite.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/ignite"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/ignite.html"'
+                    },
+                    {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/jenkins"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/jenkins.html"'
                     },
                     {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/jenkins"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/jenkins.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/terraform"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/terraform.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/terraform"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/terraform.html"'
                     }
                     ] 
                 } 

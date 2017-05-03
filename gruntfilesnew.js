@@ -53,7 +53,8 @@ module.exports = function (grunt) {
                     'public/2017/01/21/' : 'public/2017/01/21/*.html',
                     'public/2017/02/09/' : 'public/2017/02/09/*.html',
                     'public/2017/02/13/' : 'public/2017/02/13/*.html',
-                    'public/2017/02/23/' : 'public/2017/02/23/*.html'
+                    'public/2017/02/23/' : 'public/2017/02/23/*.html',
+                    'public/2017/05/01/' : 'public/2017/05/01/*.html'
                 }, 
                 options: { 
                     replacements: [{ 
@@ -166,7 +167,7 @@ module.exports = function (grunt) {
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/02\/13\/live-demo"',
                         replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/02\/13\/live-demo.html"'
                     },
-                    //ignte wrapup
+                        //ignte wrapup
                     {
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/02\/23\/ignite-wrap-up"',
                         replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/02\/23\/ignite-wrap-up.html"'
@@ -186,6 +187,27 @@ module.exports = function (grunt) {
                     {
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/02\/23\/ignite-wrap-up"',
                         replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/02\/23\/ignite-wrap-up.html"'
+                    },
+                    {
+                        //getting started with Terraform
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/01\/getting-started-with-terraform-on-azure"',
+                        replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/01\/getting-started-with-terraform-on-azure.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/01\/getting-started-with-terraform-on-azure"',
+                        replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/01\/getting-started-with-terraform-on-azure.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/01\/getting-started-with-terraform-on-azure"',
+                        replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/01\/getting-started-with-terraform-on-azure.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/01\/getting-started-with-terraform-on-azure"',
+                        replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/01\/getting-started-with-terraform-on-azure.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/01\/getting-started-with-terraform-on-azure"',
+                        replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/01\/getting-started-with-terraform-on-azure.html"'
                     },
                     {
                         //tags - 1 plus number of tags
@@ -209,6 +231,10 @@ module.exports = function (grunt) {
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/azure.html"'
                     },
                     {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/azure"',
+                        replacement: 'href="http://cdn.mfriedrich.cloud/tags/azure.html"'
+                    },
+                    {
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/blob"',
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/blob.html"'
                     },
@@ -223,14 +249,6 @@ module.exports = function (grunt) {
                     {
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/hugo"',
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/hugo.html"'
-                    },
-                    {
-                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/jenkins"',
-                        replacement: 'href="http://cdn.mfriedrich.cloud/tags/jenkins.html"'
-                    },
-                    {
-                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/jenkins"',
-                        replacement: 'href="http://cdn.mfriedrich.cloud/tags/jenkins.html"'
                     },
                     {
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/ignite"',
@@ -247,6 +265,22 @@ module.exports = function (grunt) {
                                         {
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/ignite"',
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/ignite.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/jenkins"',
+                        replacement: 'href="http://cdn.mfriedrich.cloud/tags/jenkins.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/jenkins"',
+                        replacement: 'href="http://cdn.mfriedrich.cloud/tags/jenkins.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/terraform"',
+                        replacement: 'href="http://cdn.mfriedrich.cloud/tags/terraform.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/terraform"',
+                        replacement: 'href="http://cdn.mfriedrich.cloud/tags/terraform.html"'
                     }
                     ] 
                 } 
