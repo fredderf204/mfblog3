@@ -167,8 +167,8 @@ module.exports = function (grunt) {
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/02\/13\/live-demo"',
                         replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/02\/13\/live-demo.html"'
                     },
-                        //ignte wrapup
                     {
+                        //ignte wrapup
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/02\/23\/ignite-wrap-up"',
                         replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/02\/23\/ignite-wrap-up.html"'
                     },

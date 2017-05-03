@@ -167,6 +167,27 @@ module.exports = function (grunt) {
                         replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/13\/live-demo.html"'
                     },
                     {
+                        //ignte wrapup
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/23\/ignite-wrap-up"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/23\/ignite-wrap-up.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/23\/ignite-wrap-up"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/23\/ignite-wrap-up.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/23\/ignite-wrap-up"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/23\/ignite-wrap-up.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/23\/ignite-wrap-up"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/23\/ignite-wrap-up.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/23\/ignite-wrap-up"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/02\/23\/ignite-wrap-up.html"'
+                    },
+                    {
                         //getting started with Terraform
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/05\/01\/getting-started-with-terraform-on-azure"',
                         replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/05\/01\/getting-started-with-terraform-on-azure.html"'
