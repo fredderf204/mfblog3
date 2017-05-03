@@ -53,6 +53,7 @@ module.exports = function (grunt) {
                     'public/2017/01/21/' : 'public/2017/01/21/*.html',
                     'public/2017/02/09/' : 'public/2017/02/09/*.html',
                     'public/2017/02/13/' : 'public/2017/02/13/*.html',
+                    'public/2017/02/23/' : 'public/2017/02/23/*.html',
                     'public/2017/05/01/' : 'public/2017/05/01/*.html'
                 }, 
                 options: { 
