@@ -54,7 +54,8 @@ module.exports = function (grunt) {
                     'public/2017/02/09/' : 'public/2017/02/09/*.html',
                     'public/2017/02/13/' : 'public/2017/02/13/*.html',
                     'public/2017/02/23/' : 'public/2017/02/23/*.html',
-                    'public/2017/05/01/' : 'public/2017/05/01/*.html'
+                    'public/2017/05/01/' : 'public/2017/05/01/*.html',
+                    'public/2017/05/30/' : 'public/2017/05/30/*.html'
                 }, 
                 options: { 
                     replacements: [{ 
@@ -63,6 +64,7 @@ module.exports = function (grunt) {
                         replacement: '<a href="http://cdn.mfriedrich.cloud/index.html"' 
                     }, 
                     { 
+                        //Posts
                         //starting-a-blog
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/01\/02\/starting-a-blog"', 
                         replacement: 'href="http://cdn.mfriedrich.cloud/2017/01/02/starting-a-blog.html"' 
@@ -168,7 +170,7 @@ module.exports = function (grunt) {
                         replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/02\/13\/live-demo.html"'
                     },
                     {
-                        //ignte wrapup
+                        //ignite wrapup
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/02\/23\/ignite-wrap-up"',
                         replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/02\/23\/ignite-wrap-up.html"'
                     },
@@ -210,7 +212,29 @@ module.exports = function (grunt) {
                         replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/01\/getting-started-with-terraform-on-azure.html"'
                     },
                     {
+                        //talking helm for a spin
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/30\/taking-helm-for-a-spin"',
+                        replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/staging\/2017\/05\/30\/taking-helm-for-a-spin.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/30\/taking-helm-for-a-spin"',
+                        replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/30\/taking-helm-for-a-spin.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/30\/taking-helm-for-a-spin"',
+                        replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/30\/taking-helm-for-a-spin.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/30\/taking-helm-for-a-spin"',
+                        replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/30\/taking-helm-for-a-spin.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/30\/taking-helm-for-a-spin"',
+                        replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/30\/taking-helm-for-a-spin.html"'
+                    },
+                    {
                         //tags - 1 plus number of tags
+                        //app-service
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/app-service"',
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/app-service.html"'
                     },
@@ -219,6 +243,7 @@ module.exports = function (grunt) {
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/app-service.html"'
                     },
                     {
+                        //azure
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/azure"',
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/azure.html"'
                     },
@@ -235,6 +260,11 @@ module.exports = function (grunt) {
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/azure.html"'
                     },
                     {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/azure"',
+                        replacement: 'href="http://cdn.mfriedrich.cloud/tags/azure.html"'
+                    },
+                    {
+                        //blob
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/blob"',
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/blob.html"'
                     },
@@ -243,6 +273,16 @@ module.exports = function (grunt) {
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/blob.html"'
                     },
                     {
+                        //helm
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/helm"',
+                        replacement: 'href="http://cdn.mfriedrich.cloud/tags/hugo.helm"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/helm"',
+                        replacement: 'href="http://cdn.mfriedrich.cloud/tags/hugo.helm"'
+                    },
+                    {
+                        //hugo
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/hugo"',
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/hugo.html"'
                     },
@@ -251,6 +291,7 @@ module.exports = function (grunt) {
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/hugo.html"'
                     },
                     {
+                        //ignite
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/ignite"',
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/ignite.html"'
                     },
@@ -267,6 +308,7 @@ module.exports = function (grunt) {
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/ignite.html"'
                     },
                     {
+                        //jenkins
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/jenkins"',
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/jenkins.html"'
                     },
@@ -275,6 +317,16 @@ module.exports = function (grunt) {
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/jenkins.html"'
                     },
                     {
+                        //kubernetes
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/kubernetes"',
+                        replacement: 'href="http://cdn.mfriedrich.cloud/tags/kubernetes.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/kubernetes"',
+                        replacement: 'href="http://cdn.mfriedrich.cloud/tags/kubernetes.html"'
+                    },
+                    {
+                        //terraform
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/tags\/terraform"',
                         replacement: 'href="http://cdn.mfriedrich.cloud/tags/terraform.html"'
                     },
