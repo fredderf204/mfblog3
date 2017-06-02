@@ -214,7 +214,7 @@ module.exports = function (grunt) {
                     {
                         //talking helm for a spin
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/30\/taking-helm-for-a-spin"',
-                        replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/staging\/2017\/05\/30\/taking-helm-for-a-spin.html"'
+                        replacement: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/30\/taking-helm-for-a-spin.html"'
                     },
                     {
                         pattern: 'href="http:\/\/cdn.mfriedrich.cloud\/2017\/05\/30\/taking-helm-for-a-spin"',

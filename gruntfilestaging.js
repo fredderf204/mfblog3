@@ -55,7 +55,7 @@ module.exports = function (grunt) {
                     'public/2017/02/13/' : 'public/2017/02/13/*.html',
                     'public/2017/02/23/' : 'public/2017/02/23/*.html',
                     'public/2017/05/01/' : 'public/2017/05/01/*.html',
-                    'public/2017/05/30/' : 'public/2017/05/01/*.html'
+                    'public/2017/05/30/' : 'public/2017/05/30/*.html'
                 }, 
                 options: { 
                     replacements: [{ 
