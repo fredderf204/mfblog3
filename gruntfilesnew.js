@@ -1,44 +1,42 @@
 module.exports = function (grunt) { 
  
     grunt.initConfig({   
-        clean: { 
-            //delete last backup  
-            backup: {  
-                src: ['backup/*'] 
-            }, 
-            //delete public folder 
-            public: { 
-                src: ['public'] 
-            } 
-        }, 
-        //create backup 
-        copy: { 
-            backup: { 
-                expand: true, 
-                src: ['**', '!backup', '!**/node_modules/**'], 
-                dest: 'backup/backup-<%=grunt.template.today("yyyy-mm-dd-hh-mm")%>/' 
-            } 
-        }, 
-        //generate hugo public folder 
-        exec: { 
-            hugobuild: { 
-                command: 'hugo' 
-            } 
-        }, 
-        //html min
+        //javascript minification
+        uglify: {
+            options: {
+                drop_console: true
+            },
+            main: {
+                files: [{
+                    expand: true,
+                    src: ['public/**/*.js'],
+                    dest: ''
+                }]
+            }
+        },
+        //css minification
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    src: ['public/**/*.css'],
+                    dest: ''
+                }]
+            }
+        },
+        //html minification
         htmlmin: {
-            dist: {
-                options: {
+            dist: {                                      
+                options: {                                
                     removeComments: true,
-                    collapseWhitespace: true
+                    collapseWhitespace: true,
+                    minifyJS: true
                 },
-                files: {
-                    'public/' : 'public/*.html', 
-                    'public/page/**' : 'public/page/*.html', 
-                    'public/tags/**' : 'public/tags/*.html', 
-                    'public/2017/01/02/**' : 'public/2017/01/02/*.html', 
-                    'public/2017/01/11/**' : 'public/2017/01/11/*.html'
-                }
+                files: [{
+                    expand: true,
+                    src: ['public/**/*.html'],
+                    dest: ''
+                }]
             }
         },
         //string replace bad links 
@@ -341,15 +339,13 @@ module.exports = function (grunt) {
     }); 
  
     // Load the plugins 
-    grunt.loadNpmTasks('grunt-contrib-clean'); 
-    grunt.loadNpmTasks('grunt-contrib-copy'); 
-    grunt.loadNpmTasks('grunt-exec'); 
-    //grunt.loadNpmTasks('grunt-processhtml') 
-    grunt.loadNpmTasks('grunt-string-replace'); 
+    grunt.loadNpmTasks('grunt-string-replace');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
  
     // Default task(s). 
-    grunt.registerTask('default', ['htmlmin:dist', 'string-replace:badlinks']); 
+    grunt.registerTask('default', ['uglify', 'cssmin:target', 'string-replace:badlinks', 'htmlmin:dist']);
  
 }; 
 

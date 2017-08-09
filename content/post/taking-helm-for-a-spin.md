@@ -246,7 +246,7 @@ Now follow the on screen instructions to access your custom app.
 
 Simply put, Chart Repositories are a location where packaged charts can be stored and shared. So....... let's create our own :crown:
 
-Firstly lets create a new Azure Sotrage account to house our charts. Run the below command
+Firstly lets create a new Azure Storage account to house our charts. Run the below command
 
 `az storage account create -n mfazurecharts -g acsdemo1 -l 'Australia East' --sku Standard_LRS --access-tier Hot --encryption blob --kind BlobStorage`
 
