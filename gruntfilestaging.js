@@ -2,7 +2,7 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         //javascript minification
-        'uglify': {
+        uglify: {
             options: {
                 drop_console: true
             },
