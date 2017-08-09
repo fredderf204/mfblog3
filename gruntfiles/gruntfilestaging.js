@@ -344,7 +344,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     // Default task(s). 
-    grunt.registerTask('default', ['uglify:main', 'cssmin:target', 'string-replace:badlinks', 'htmlmin:dist']);
+    grunt.registerTask('default', ['uglify', 'cssmin:target', 'string-replace:badlinks', 'htmlmin:dist']);
 
 };
 
