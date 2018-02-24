@@ -12,7 +12,7 @@ pipeline {
 
         stage('build') {
             steps {
-                sh 'if exist public rmdir public /s /Q'
+                sh 'rm -rf public'
                 sh 'hugo --baseURL http://mfblog3.blob.core.windows.net/staging/'
                 sh 'npm install --dev-only'
                 sh './node_modules/.bin/grunt --gruntfile gruntfilestaging.js -v'
