@@ -16,7 +16,10 @@ pipeline {
                 sh 'hugo --baseURL http://mfblog3.blob.core.windows.net/staging/'
                 sh 'npm install --dev-only'
                 sh './node_modules/.bin/grunt --gruntfile gruntfilestaging.js -v'
-                azureUpload blobProperties: [cacheControl: 'max-age=3600, must-revalidate', contentEncoding: '', contentLanguage: '', contentType: '', detectContentType: true], cleanUpContainerOrShare: true, containerName: 'staging', excludeFilesPath: '', fileShareName: '', filesPath: 'public/**::', storageCredentialId: '8ad1a96f-f51e-4a31-b326-49bbb87c895d', storageType: 'blobstorage'
+                withCredentials([usernamePassword(credentialsId: '12964816-c552-4356-a99b-439e5f0688b5', passwordVariable: 'sak', usernameVariable: 'san')]) {
+                    sh 'azcopy --source /public --destination https://mfblog3.blob.core.windows.net/staging --dest-key $sak --recursive --quiet --set-content-type'
+                    }
+                sh 'echo set caching settings placeholder'
             }
         }
 
@@ -25,6 +28,24 @@ pipeline {
                 timeout(time:30, unit:'MINUTES') {
                     input message:'http://mfblog3.blob.core.windows.net/staging/index.html Approve deployment?'
                 }
+            }
+        }
+
+        stage('backup') {
+            steps {
+                sh 'echo backup'
+            }
+        }
+
+        stage('deploy') {
+            steps {
+                sh 'echo deploy'
+            }
+        }
+
+        stage('cdn') {
+            steps {
+                sh 'echo purge cdn'
             }
         }
     }
