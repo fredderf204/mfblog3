@@ -49,7 +49,7 @@ pipeline {
                     sh 'azcopy --source $WORKSPACE/public --destination https://mfblog3.blob.core.windows.net/blog --dest-key $sak --recursive --quiet --set-content-type'
                     }
                 withCredentials([usernamePassword(credentialsId: '12964816-c552-4356-a99b-439e5f0688b5', passwordVariable: 'sak', usernameVariable: 'san')]) {    
-                    azureCLI commands: [[exportVariablesString: '', script: 'az storage blob list --account-name mfblog3 --account-key $sak -c blog --query "[].{name:name}" -o table | tail -n +3 | xargs -I % az storage blob update --account-name mfblog3 --account-key $sak --container-name blog --content-cache-control "max-age=3600, must-revalidate" --name %']], principalCredentialId: '7f122f04-9592-4782-a3f3-822196987cd8'
+                    sh 'az storage blob list --account-name mfblog3 --account-key $sak -c blog --query "[].{name:name}" -o table | tail -n +3 | xargs -I % az storage blob update --account-name mfblog3 --account-key $sak --container-name blog --content-cache-control "max-age=3600, must-revalidate" --name %'
                 }
             }
         }
