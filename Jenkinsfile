@@ -44,7 +44,7 @@ pipeline {
                 sh 'rm -rf public'
                 sh 'hugo --baseURL https://cdn.mfriedrich.cloud/'
                 sh 'npm install --dev-only'
-                sh './node_modules/.bin/grunt --gruntfile gruntfilenew.js -v'
+                sh './node_modules/.bin/grunt --gruntfile gruntfilesnew.js -v'
                 withCredentials([usernamePassword(credentialsId: '12964816-c552-4356-a99b-439e5f0688b5', passwordVariable: 'sak', usernameVariable: 'san')]) {
                     sh 'azcopy --source $WORKSPACE/public --destination https://mfblog3.blob.core.windows.net/blog --dest-key $sak --recursive --quiet --set-content-type'
                     }
