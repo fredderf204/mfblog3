@@ -53,7 +53,8 @@ module.exports = function (grunt) {
                     'public/2017/02/13/': 'public/2017/02/13/*.html',
                     'public/2017/02/23/': 'public/2017/02/23/*.html',
                     'public/2017/05/01/': 'public/2017/05/01/*.html',
-                    'public/2017/05/30/': 'public/2017/05/30/*.html'
+                    'public/2017/05/30/': 'public/2017/05/30/*.html',
+                    'public/2018/02/27/': 'public/2018/02/27/*.html'
                 },
                 options: {
                     replacements: [{
@@ -231,8 +232,33 @@ module.exports = function (grunt) {
                         replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2017\/05\/30\/taking-helm-for-a-spin.html"'
                     },
                     {
-                        //tags - 1 plus number of tags
+                        //Start using Jenkins with Azure in 5 minutes
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes"',
+                        replacement: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes.html"'
+                    },
+                    {
+                        //tags - 2 plus number of tags
                         //app-service
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/app-service"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/app-service.html"'
+                    },
+                    {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/app-service"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/app-service.html"'
                     },
@@ -262,7 +288,19 @@ module.exports = function (grunt) {
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/azure.html"'
                     },
                     {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/azure"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/azure.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/azure"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/azure.html"'
+                    },
+                    {
                         //blob
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/blob"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/blob.html"'
+                    },
+                    {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/blob"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/blob.html"'
                     },
@@ -280,7 +318,15 @@ module.exports = function (grunt) {
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/helm.html"'
                     },
                     {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/helm"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/helm.html"'
+                    },
+                    {
                         //hugo
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/hugo"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/hugo.html"'
+                    },
+                    {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/hugo"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/hugo.html"'
                     },
@@ -306,7 +352,18 @@ module.exports = function (grunt) {
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/ignite.html"'
                     },
                     {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/ignite"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/ignite.html"'
+                    },
+                    {
                         //jenkins
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/jenkins"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/jenkins.html"'
+                    },
+                    {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/jenkins"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/jenkins.html"'
+                    },                    {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/jenkins"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/jenkins.html"'
                     },
@@ -324,7 +381,15 @@ module.exports = function (grunt) {
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/kubernetes.html"'
                     },
                     {
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/kubernetes"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/kubernetes.html"'
+                    },
+                    {
                         //terraform
+                        pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/terraform"',
+                        replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/terraform.html"'
+                    },
+                    {
                         pattern: 'href="http:\/\/mfblog3.blob.core.windows.net\/staging\/tags\/terraform"',
                         replacement: 'href="http://mfblog3.blob.core.windows.net/staging/tags/terraform.html"'
                     },

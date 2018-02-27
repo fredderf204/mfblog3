@@ -46,7 +46,12 @@ enableemoji = true
 [[params.menu]]
     before = false
     label  = "Tags"
-    link   = "tags/index.html"
+    link   = "tags.html"
+
+[[params.menu]]
+    before = false
+    label  = "Posts"
+    link   = "post.html"
 
 # Enter a link for the follow button on the left
 [params.profile]

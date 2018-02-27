@@ -53,7 +53,8 @@ module.exports = function (grunt) {
                     'public/2017/02/13/' : 'public/2017/02/13/*.html',
                     'public/2017/02/23/' : 'public/2017/02/23/*.html',
                     'public/2017/05/01/' : 'public/2017/05/01/*.html',
-                    'public/2017/05/30/' : 'public/2017/05/30/*.html'
+                    'public/2017/05/30/' : 'public/2017/05/30/*.html',
+                    'public/2018/02/27/': 'public/2018/02/27/*.html'
                 }, 
                 options: { 
                     replacements: [{ 
@@ -231,8 +232,33 @@ module.exports = function (grunt) {
                         replacement: 'href="https:\/\/cdn.mfriedrich.cloud\/2017\/05\/30\/taking-helm-for-a-spin.html"'
                     },
                     {
-                        //tags - 1 plus number of tags
+                        //Start using Jenkins with Azure in 5 minutes
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes"',
+                        replacement: 'href="https:\/\/cdn.mfriedrich.cloud\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes.html"'
+                    },
+                    {
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes"',
+                        replacement: 'href="https:\/\/cdn.mfriedrich.cloud\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes.html"'
+                    },
+                    {
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes"',
+                        replacement: 'href="https:\/\/cdn.mfriedrich.cloud\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes.html"'
+                    },
+                    {
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes"',
+                        replacement: 'href="https:\/\/cdn.mfriedrich.cloud\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes.html"'
+                    },
+                    {
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes"',
+                        replacement: 'href="https:\/\/cdn.mfriedrich.cloud\/2018\/02\/27\/start-using-jenkins-with-azure-in-5-minutes.html"'
+                    },
+                    {
+                        //tags - 2 plus number of tags
                         //app-service
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/app-service"',
+                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/app-service.html"'
+                    },
+                    {
                         pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/app-service"',
                         replacement: 'href="https://cdn.mfriedrich.cloud/tags/app-service.html"'
                     },
@@ -262,7 +288,19 @@ module.exports = function (grunt) {
                         replacement: 'href="https://cdn.mfriedrich.cloud/tags/azure.html"'
                     },
                     {
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/azure"',
+                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/azure.html"'
+                    },
+                    {
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/azure"',
+                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/azure.html"'
+                    },
+                    {
                         //blob
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/blob"',
+                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/blob.html"'
+                    },
+                    {
                         pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/blob"',
                         replacement: 'href="https://cdn.mfriedrich.cloud/tags/blob.html"'
                     },
@@ -273,14 +311,26 @@ module.exports = function (grunt) {
                     {
                         //helm
                         pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/helm"',
-                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/hugo.helm"'
+                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/hugo.html"'
                     },
                     {
                         pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/helm"',
-                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/hugo.helm"'
+                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/hugo.html"'
+                    },
+                    {
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/helm"',
+                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/hugo.html"'
                     },
                     {
                         //hugo
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/hugo"',
+                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/hugo.html"'
+                    },
+                    {
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/hugo"',
+                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/hugo.html"'
+                    },
+                    {
                         pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/hugo"',
                         replacement: 'href="https://cdn.mfriedrich.cloud/tags/hugo.html"'
                     },
@@ -301,12 +351,20 @@ module.exports = function (grunt) {
                         pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/ignite"',
                         replacement: 'href="https://cdn.mfriedrich.cloud/tags/ignite.html"'
                     },
-                                        {
+                    {
                         pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/ignite"',
                         replacement: 'href="https://cdn.mfriedrich.cloud/tags/ignite.html"'
                     },
                     {
                         //jenkins
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/jenkins"',
+                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/jenkins.html"'
+                    },
+                    {
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/jenkins"',
+                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/jenkins.html"'
+                    },
+                    {
                         pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/jenkins"',
                         replacement: 'href="https://cdn.mfriedrich.cloud/tags/jenkins.html"'
                     },
@@ -324,7 +382,15 @@ module.exports = function (grunt) {
                         replacement: 'href="https://cdn.mfriedrich.cloud/tags/kubernetes.html"'
                     },
                     {
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/kubernetes"',
+                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/kubernetes.html"'
+                    },
+                    {
                         //terraform
+                        pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/terraform"',
+                        replacement: 'href="https://cdn.mfriedrich.cloud/tags/terraform.html"'
+                    },
+                    {
                         pattern: 'href="https:\/\/cdn.mfriedrich.cloud\/tags\/terraform"',
                         replacement: 'href="https://cdn.mfriedrich.cloud/tags/terraform.html"'
                     },
