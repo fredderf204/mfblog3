@@ -1,7 +1,7 @@
 +++
 title = "Start using Jenkins with Azure in 5 minutes!"
-tags = ["Azure, Jenkins"]
-keywords = ["Azure, Jenkins"]
+tags = ["Azure", "Jenkins"]
+keywords = ["Azure", "Jenkins"]
 description = "Have you always wanted to start using Jenkins with Azure? Do you have 5 minutes? Well...... your in luck!"
 banner = "img/azjenkban.png"
 images = []
