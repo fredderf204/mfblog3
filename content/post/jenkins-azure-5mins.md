@@ -13,7 +13,7 @@ TLDR
 
 Have you always wanted to use [Jenkins](https://jenkins.io) with Azure :grey_question: Do you have ~5 minutes :thumbsup: Well...... maybe not exactly 5 minutes, but not very much time at all :exclamation:
 
-I have created a docker :whale: image based on the lts Jenkins Docker image that contains the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/overview?view=azure-cli-latest), [AZCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-linux?toc=%2fazure%2fstorage%2fblobs%2ftoc.json) and comes preconfigured with commonly used Jenkins plugins for Azure. So all you need to do is download the docker image and start hacking away with Jenkins and Azure :stuck_out_tongue_winking_eye:
+I have created a docker :whale: image based on the lts Jenkins Docker image that contains the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/overview?view=azure-cli-latest), [AZCopy](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-linux?toc=%2fazure%2fstorage%2fblobs%2ftoc.json) and comes preconfigured with commonly used Jenkins plugins for Azure. So all you need to do to get a dev Jenkins server setup locally on your laptop is download the docker image, spin it up using docker and start hacking away with Jenkins and Azure :stuck_out_tongue_winking_eye:
 
 Prereqs
 ----

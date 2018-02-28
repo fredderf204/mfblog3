@@ -56,7 +56,7 @@ pipeline {
 
         stage('cdn') {
             steps {
-                azureCLI commands: [[exportVariablesString: '', script: 'az cdn endpoint purge -g hugo --profile-name mf -n mfblog --content-paths "/*"']], principalCredentialId: '7f122f04-9592-4782-a3f3-822196987cd8'
+                azureCLI commands: [[exportVariablesString: '', script: 'az cdn endpoint purge -g hugo --profile-name mf -n mfblog --content-paths "/*"']], principalCredentialId: 'df5b41bf-d227-4c5f-bd28-1552d07c0d60'
             }
         }
     }
