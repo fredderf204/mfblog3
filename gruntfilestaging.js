@@ -42,7 +42,6 @@ module.exports = function (grunt) {
     });
 
     // Load the plugins 
-    grunt.loadNpmTasks('grunt-string-replace');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
