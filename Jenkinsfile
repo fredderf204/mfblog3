@@ -14,8 +14,8 @@ pipeline {
             steps {
                 sh 'rm -rf public'
                 sh 'hugo --baseURL http://mfblobpremstg.azureedge.net/'
-                //sh 'npm install --dev-only'
-                //sh './node_modules/.bin/grunt --gruntfile gruntfilestaging.js -v'
+                sh 'npm install --dev-only'
+                sh './node_modules/.bin/grunt --gruntfile gruntfilestaging.js -v'
                 withCredentials([usernamePassword(credentialsId: '12964816-c552-4356-a99b-439e5f0688b5', passwordVariable: 'sak', usernameVariable: 'san')]) {
                     sh 'azcopy --source $WORKSPACE/public --destination https://mfblog3.blob.core.windows.net/staging --dest-key $sak --recursive --quiet --set-content-type'
                     }
@@ -27,7 +27,7 @@ pipeline {
 
         stage('test') {
             steps {
-                azureCLI commands: [[exportVariablesString: '', script: 'az cdn endpoint purge -g hugo --profile-name mfabprem -n mfblobpremstg --content-paths "/"']], principalCredentialId: 'df5b41bf-d227-4c5f-bd28-1552d07c0d60'
+                azureCLI commands: [[exportVariablesString: '', script: 'az cdn endpoint purge -g hugo --profile-name mfabprem -n mfblobpremstg --content-paths \'/*\'']], principalCredentialId: 'df5b41bf-d227-4c5f-bd28-1552d07c0d60'
                 timeout(time:30, unit:'MINUTES') {
                     input message:'http://mfblobpremstg.azureedge.net/ Approve deployment?'
                 }
