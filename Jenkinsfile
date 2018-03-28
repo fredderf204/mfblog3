@@ -13,9 +13,9 @@ pipeline {
         stage('build') {
             steps {
                 sh 'rm -rf public'
-                sh 'hugo --baseURL http://mfblog3.blob.core.windows.net/staging/'
-                sh 'npm install --dev-only'
-                sh './node_modules/.bin/grunt --gruntfile gruntfilestaging.js -v'
+                sh 'hugo --baseURL http://mfblobpremstg.azureedge.net/'
+                //sh 'npm install --dev-only'
+                //sh './node_modules/.bin/grunt --gruntfile gruntfilestaging.js -v'
                 withCredentials([usernamePassword(credentialsId: '12964816-c552-4356-a99b-439e5f0688b5', passwordVariable: 'sak', usernameVariable: 'san')]) {
                     sh 'azcopy --source $WORKSPACE/public --destination https://mfblog3.blob.core.windows.net/staging --dest-key $sak --recursive --quiet --set-content-type'
                     }
@@ -28,7 +28,7 @@ pipeline {
         stage('test') {
             steps {
                 timeout(time:30, unit:'MINUTES') {
-                    input message:'http://mfblog3.blob.core.windows.net/staging/index.html Approve deployment?'
+                    input message:'http://mfblobpremstg.azureedge.net/index.html Approve deployment?'
                 }
             }
         }
