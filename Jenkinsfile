@@ -20,15 +20,16 @@ pipeline {
                     sh 'azcopy --source $WORKSPACE/public --destination https://mfblog3.blob.core.windows.net/staging --dest-key $sak --recursive --quiet --set-content-type'
                     }
                 withCredentials([usernamePassword(credentialsId: '12964816-c552-4356-a99b-439e5f0688b5', passwordVariable: 'sak', usernameVariable: 'san')]) {    
-                    sh 'az storage blob list --account-name mfblog3 --account-key $sak -c staging --query "[].{name:name}" -o table | tail -n +3 | xargs -I % az storage blob update --account-name mfblog3 --account-key $sak --container-name staging --content-cache-control "max-age=3600, must-revalidate" --name %'
+                    sh 'az storage blob list --account-name mfblog3 --account-key $sak -c staging --query "[].{name:name}" -o table | tail -n +3 | xargs -I % az storage blob update --account-name mfblog3 --account-key $sak --container-name staging --content-cache-control "max-age=86400, must-revalidate" --name %'
                 }
             }
         }
 
         stage('test') {
             steps {
+                azureCLI commands: [[exportVariablesString: '', script: 'az cdn endpoint purge -g hugo --profile-name mfabprem -n mfblobpremstg --content-paths "/"']], principalCredentialId: 'df5b41bf-d227-4c5f-bd28-1552d07c0d60'
                 timeout(time:30, unit:'MINUTES') {
-                    input message:'http://mfblobpremstg.azureedge.net/index.html Approve deployment?'
+                    input message:'http://mfblobpremstg.azureedge.net/ Approve deployment?'
                 }
             }
         }
@@ -43,8 +44,8 @@ pipeline {
             steps {
                 sh 'rm -rf public'
                 sh 'hugo --baseURL https://cdn.mfriedrich.cloud/'
-                sh 'npm install --dev-only'
-                sh './node_modules/.bin/grunt --gruntfile gruntfilesnew.js -v'
+                //sh 'npm install --dev-only'
+                //sh './node_modules/.bin/grunt --gruntfile gruntfilesnew.js -v'
                 withCredentials([usernamePassword(credentialsId: '12964816-c552-4356-a99b-439e5f0688b5', passwordVariable: 'sak', usernameVariable: 'san')]) {
                     sh 'azcopy --source $WORKSPACE/public --destination https://mfblog3.blob.core.windows.net/blog --dest-key $sak --recursive --quiet --set-content-type'
                     }
