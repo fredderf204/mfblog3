@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "hugo blog",
   "devDependencies": {
+    "azure-arm-cdn": "^4.0.0",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-cssmin": "^2.2.1",

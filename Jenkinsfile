@@ -13,7 +13,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'rm -rf public'
-                sh 'hugo --baseURL http://stagingblog.mfriedrich.cloud/'
+                sh 'hugo --baseURL https://stagingblog.mfriedrich.cloud/'
                 sh 'npm install --dev-only'
                 sh './node_modules/.bin/grunt --gruntfile gruntfilestaging.js -v'
                 withCredentials([usernamePassword(credentialsId: '12964816-c552-4356-a99b-439e5f0688b5', passwordVariable: 'sak', usernameVariable: 'san')]) {
@@ -27,7 +27,11 @@ pipeline {
 
         stage('test') {
             steps {
-                azureCLI commands: [[exportVariablesString: '', script: 'az cdn endpoint purge -g hugo --profile-name mfabprem -n mfblobpremstg --content-paths \'/*\'']], principalCredentialId: 'df5b41bf-d227-4c5f-bd28-1552d07c0d60'
+                withCredentials([azureServicePrincipal('df5b41bf-d227-4c5f-bd28-1552d07c0d60')]) {
+                    withEnv(['azurerg=hugo', 'cdnprofile=mfabprem', 'cdnendpoint=mfblobpremstg']) {
+                        sh '$WORKSPACE/script/purgecdn.js'
+                    }
+                }
                 timeout(time:30, unit:'MINUTES') {
                     input message:'http://mfblobpremstg.azureedge.net/ Approve deployment?'
                 }
