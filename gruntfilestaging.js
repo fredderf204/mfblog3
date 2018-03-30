@@ -53,7 +53,7 @@ module.exports = function (grunt) {
             },
             jpg: {
                 options: {
-                  progressive: true
+                  progressive: false
                 },
                 files: [{
                     expand: true,

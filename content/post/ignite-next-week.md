@@ -1,6 +1,7 @@
 +++
 title = "Microsoft Ignite Next Week!"
 banner = "img/igniteban.png"
+bannerrecent = "img/ignitebanrecent.png"
 images = []
 tags = ["Ignite"]
 keywords = ["Azure", "Ignite", "Australia"]

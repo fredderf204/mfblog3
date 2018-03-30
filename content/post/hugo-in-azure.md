@@ -1,6 +1,7 @@
 +++
 title = "Hugo in Azure BLOB storage"
 banner = "img/hugoazureban.png"
+bannerrecent = "img/hugoazureban.png"
 images = []
 tags = ["Azure", "Hugo", "BLOB"]
 keywords = ["Azure", "Hugo", "BLOB"]

@@ -5,6 +5,7 @@ tags = ["Azure", "App Service", "Jenkins"]
 keywords = ["Azure", "App Service", "Jenkins"]
 description = "Yes, you can have a basic Jenkins Server up and running in Azure App Service very quickly ::): You won’t get all of the features Jenkins has to offer, but if you want to get up and running quickly and you don’t want to manage a server, this could be for you!"
 banner = "img/jenkban.png"
+bannerrecent = "img/jenkban.png"
 date = "2017-01-11T16:21:36+11:00"
 
 +++

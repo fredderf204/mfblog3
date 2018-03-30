@@ -1,6 +1,7 @@
 +++
 title = "Ignite wrap up"
 banner = "img/ignitewrapupban.png"
+bannerrecent = "img/ignitewrapupbanrecent.png"
 images = []
 tags = ["Ignite"]
 keywords = ["Azure", "Ignite", "Australia", "wrapup"]

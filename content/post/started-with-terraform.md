@@ -1,5 +1,6 @@
 +++
 banner = "img/terraformban.png"
+bannerrecent = "img/terraformban.png"
 categories = []
 date = "2017-05-01T16:23:18+10:00"
 keywords = ["Azure", "Terraform"]

@@ -1,5 +1,6 @@
 +++
 banner = "img/helmban.png"
+bannerrecent = "img/helmban.png"
 categories = []
 date = "2017-05-30T15:59:58+10:00"
 keywords = ["Azure", "Kubernetes", "Helm"]

@@ -1,6 +1,7 @@
 +++
 title = "Live Demo!"
 banner = "img/ignitedemoban.png"
+bannerrecent = "img/ignitedemobanrecent.png"
 images = []
 tags = ["Ignite"]
 keywords = ["Azure", "Ignite", "Australia", "demo"]

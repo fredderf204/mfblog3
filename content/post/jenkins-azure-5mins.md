@@ -4,6 +4,7 @@ tags = ["Azure", "Jenkins"]
 keywords = ["Azure", "Jenkins"]
 description = "Have you always wanted to start using Jenkins with Azure? Do you have 5 minutes? Well...... your in luck!"
 banner = "img/azjenkban.png"
+bannerrecent = "img/azjenkban.png"
 images = []
 date = "2018-02-27T21:10:58+11:00"
 +++
