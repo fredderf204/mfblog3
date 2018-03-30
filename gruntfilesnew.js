@@ -38,6 +38,28 @@ module.exports = function (grunt) {
                     dest: ''
                 }]
             }
+        },
+        imagemin: {
+            png: {
+              options: {
+                optimizationLevel: 7
+              },
+              files: [{
+                expand: true,
+                src: ['public/**/*.png'],
+                dest: ''
+                }]
+            },
+            jpg: {
+                options: {
+                  progressive: false
+                },
+                files: [{
+                    expand: true,
+                    src: ['public/**/*.jpeg'],
+                    dest: ''
+                }]
+            }
         } 
     }); 
  
@@ -45,9 +67,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
- 
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+
     // Default task(s). 
-    grunt.registerTask('default', ['uglify', 'cssmin:target', 'htmlmin:dist']);
- 
-}; 
+    grunt.registerTask('default', ['uglify', 'cssmin:target', 'htmlmin:dist', 'imagemin']);
+
+};
 
