@@ -32,9 +32,8 @@ pipeline {
                         sh 'node ./scripts/purgecdn.js'
                     }
                 }
-                {
-                    sh 'npm run lighthouse'
-                    publishHTML (target: [
+                sh 'npm run lighthouse'
+                publishHTML (target: [
                     allowMissing: false,
                     alwaysLinkToLastBuild: false,
                     keepAll: true,
@@ -42,7 +41,6 @@ pipeline {
                     reportFiles: 'lighthouse' + $BUILD_NUMBER + '.html',
                     reportName: "Lighthouse"
                     ])
-                }
                 timeout(time:30, unit:'MINUTES') {
                     input message:'http://mfblobpremstg.azureedge.net/ Approve deployment?'
                 }
