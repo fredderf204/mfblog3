@@ -32,6 +32,8 @@ enableemoji = true
 	custom_css = []
 	custom_js  = []
 
+    disable_mathjax = true
+
 # Create custom menu entries by defining a label and a link for
 # them. Since you can also link posts, you've the option the
 # place the links before or after them.

@@ -12,6 +12,7 @@
     "grunt-contrib-htmlmin": "^2.4.0",
     "grunt-contrib-imagemin": "^2.0.1",
     "grunt-contrib-uglify": "^3.0.1",
+    "lighthouse": "^2.9.4",
     "mime": "^2.2.0",
     "path": "^0.12.7"
   }
