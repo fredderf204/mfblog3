@@ -29,8 +29,19 @@ pipeline {
             steps {
                 withCredentials([azureServicePrincipal('df5b41bf-d227-4c5f-bd28-1552d07c0d60')]) {
                     withEnv(['azurerg=hugo', 'cdnprofile=mfabprem', 'cdnendpoint=mfblobpremstg']) {
-                        sh './scripts/purgecdn.js'
+                        sh 'node ./scripts/purgecdn.js'
                     }
+                }
+                {
+                    sh 'npm run lighthouse'
+                    publishHTML (target: [
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: false,
+                    keepAll: true,
+                    reportDir: '.',
+                    reportFiles: 'lighthouse' + $BUILD_NUMBER + '.html',
+                    reportName: "Lighthouse"
+                    ])
                 }
                 timeout(time:30, unit:'MINUTES') {
                     input message:'http://mfblobpremstg.azureedge.net/ Approve deployment?'
