@@ -32,15 +32,6 @@ pipeline {
                         sh 'node ./scripts/purgecdn.js'
                     }
                 }
-                sh 'npm run lighthouse'
-                publishHTML (target: [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: false,
-                    keepAll: true,
-                    reportDir: '.',
-                    reportFiles: 'lighthouse' + $BUILD_NUMBER + '.html',
-                    reportName: "Lighthouse"
-                    ])
                 timeout(time:30, unit:'MINUTES') {
                     input message:'http://mfblobpremstg.azureedge.net/ Approve deployment?'
                 }
@@ -70,7 +61,11 @@ pipeline {
 
         stage('cdn') {
             steps {
-                azureCLI commands: [[exportVariablesString: '', script: 'az cdn endpoint purge -g hugo --profile-name mfabprem -n mfblobprem --content-paths "/*"']], principalCredentialId: 'df5b41bf-d227-4c5f-bd28-1552d07c0d60'
+                withCredentials([azureServicePrincipal('df5b41bf-d227-4c5f-bd28-1552d07c0d60')]) {
+                    withEnv(['azurerg=hugo', 'cdnprofile=mfabprem', 'cdnendpoint=mfblobprem']) {
+                        sh 'node ./scripts/purgecdn.js'
+                    }
+                }
             }
         }
     }
