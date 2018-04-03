@@ -16,7 +16,7 @@ MsRest.loginWithServicePrincipalSecret(
             if (err) { 
                 console.log(err); 
             } else {
-                console.log(JSON.stringify(result));
+                console.log(JSON.stringify(response));
             }
         });
     }
