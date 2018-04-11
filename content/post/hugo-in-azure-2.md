@@ -2,30 +2,34 @@
 title = "Hugo in Azure BLOB storage part 2"
 tags = ["Azure", "Hugo", "BLOB"]
 description = "Part 2 in the series of how to run Hugo in Azure BLOB storage"
-banner = ""
-bannerrecent = ""
+banner = "img/hugoazureban2.png"
+bannerrecent = "img/hugoazureban2.png"
 images = []
 keywords = ["Azure", "Hugo", "BLOB"]
 date = "2018-03-31T21:16:23+11:00"
 +++
 
-<!--more-->
-
 TLDR
 ---
-If you haven't read part one of this series, you can find it [here]() :bowtie:
 
-In the quest to make my blog better faster stronger :muscle: I am looking for ways to speed it up. During my experimentation and research I found [this](https://blog.lifeishao.com/2017/05/24/serving-your-static-sites-with-azure-blob-and-cdn/) blog to be very useful :tada: So useful in fact, this is how I am running my from blog from Azure Storage, with one addition. I am setting Cache-Control values in Azure Blob storage, so for pre-defined periods of time users are using the cached version of my site instead of the live version. Which is great because this is a blogging site only changes every week if I am lucky :four_leaf_clover: I found [this](https://alexandrebrisebois.wordpress.com/2013/08/11/save-money-by-setting-cache-control-on-windows-azure-blobs/) blog great in explaining cache-control values Azure Blob storage
+If you haven't read part one of this series, you can find it [here](https://blog.mfriedrich.cloud/2017/01/21/hugo-in-azure-blob-storage/) :bowtie:
+
+In the quest to make my blog better faster stronger :muscle: I am looking for ways to speed it up. During my experimentation and research I found [this](https://blog.lifeishao.com/2017/05/24/serving-your-static-sites-with-azure-blob-and-cdn/) blog to be very useful :tada: So useful in fact, this is how I am running my from blog from Azure Storage, with two additions.
+
+One - I am setting Cache-Control values in Azure Blob storage, so for pre-defined periods of time users are using the cached version of my site instead of the live version. Which is great because this is a blogging site only changes every week if I am lucky :four_leaf_clover: I found [this](https://alexandrebrisebois.wordpress.com/2013/08/11/save-money-by-setting-cache-control-on-windows-azure-blobs/) blog great in explaining cache-control values Azure Blob storage
+
+Two - I am using http compression inside my CDN profile to reduce the bandwidth used to deliver and receive an object.
 
 Also I am planning a third post in this series where I go through how I automate my deployments into Azure using Jenkins, Hugo, Grunt, AZCopy, Azure CLI and Node.js. Stay tuned for that, as I have everything automated except for my testing :pencil2:
 
 Intro
 ---
+
 Basically, this blog is going to be about how I was using the wrong :cry: approach for running a Hugo generated static site on Azure Storage. For the right way to do it, please see [this](https://blog.lifeishao.com/2017/05/24/serving-your-static-sites-with-azure-blob-and-cdn/) blog by Hao Luo.
 
 One of my main goals for running this blog was to see how cheap I could make the running costs. This is a great goal, but I found it challenging when using Azure Blob storage because it does not serve up a default file when accessed by the container name. I.e. I want my uses to access my site by going to https://blog.mfriedrich.cloud and not https://blog.mfriedrich.cloud.index.html.
 
-What made the challenge more challenging :smile: was the fact that I was using Hugo, which I love :heart: and for more information about how I was using uglyURLs with Hugo, see my previous blog [here]().
+What made the challenge more challenging :smile: was the fact that I was using Hugo, which I love :heart: and for more information about how I was using uglyURLs with Hugo, see my previous blog [here](https://blog.mfriedrich.cloud/2017/01/21/hugo-in-azure-blob-storage/). And with the changes I have made I do not need to generate uglyURLs, which has made things easier!!!!
 
 So how do we solve the issue of Azure Blob storage running Hugo generated sites? I could think of 3 ways
 
@@ -61,6 +65,18 @@ The above command does the following;
 Boom :boom::bomb::boom: now we have the Cache-Control setting set to what we want.
 
 :bulb: as a side note, I am looking to modify how I am caching certain assets on my site. But I will discuss that in a later blog.
+
+Compression
+---
+By enabling http compression for text based types, I can reduce the bandwidth used to deliver and receive an object. To do this I....
+
+1. I went to my CDN's management page by navigating to the CDN profile in the Azure portal and clicked on the Manage Button
+2. I click on HTTP Large > Cache Settings > Compression
+3. I then click on enable compression and enter in the following files types
+
+```
+text/plain,text/html,text/css,application/x-javascript,text/javascript,text/xml,application/vnd.ms-fontobject,application/javascript,application/json,application/x-font-opentype,application/x-font-truetype,application/x-font-ttf,application/xml,font/eot,font/opentype,font/otf,image/svg+xml
+```
 
 Wrap up
 ---
