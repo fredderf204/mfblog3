@@ -63,7 +63,7 @@ pipeline {
             steps {
                 withCredentials([azureServicePrincipal('df5b41bf-d227-4c5f-bd28-1552d07c0d60')]) {
                     withEnv(['azurerg=hugo', 'cdnprofile=mfabprem', 'cdnendpoint=mfblobprem']) {
-                        sh 'node ./scripts/purgecdn.js'
+                        sh 'node ./buildscripts/purgecdn.js'
                     }
                 }
             }
