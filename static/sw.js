@@ -2,7 +2,6 @@
 var CACHE_NAME = 'mfblog-v3';
 //Must add new files to array
 var urlsToCache = [
-  '/',
   '/2017/01/02/starting-a-blog/index.html',
   '/2017/01/11/jenkins-on-azure-app-service/index.html',
   '/2017/01/21/hugo-in-azure-blob-storage/index.html',
@@ -153,7 +152,7 @@ self.addEventListener("activate", function(event) {
 //Cache, falling back to network with frequent updates
 self.addEventListener("fetch", function(event) {
   event.respondWith(
-    caches.open("cache-name").then(function(cache) {
+    caches.open(CACHE_NAME).then(function(cache) {
       return cache.match(event.request).then(function(cachedResponse) {
         var fetchPromise =
           fetch(event.request).then(function(networkResponse) {
