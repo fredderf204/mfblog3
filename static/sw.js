@@ -1,4 +1,6 @@
-var CACHE_NAME = 'mfblog-v2';
+//Must increment CACHE_NAME after each change
+var CACHE_NAME = 'mfblog-v3';
+//Must add new files to array
 var urlsToCache = [
   '/',
   '/2017/01/02/starting-a-blog/index.html',
@@ -11,6 +13,7 @@ var urlsToCache = [
   '/2017/05/30/taking-helm-for-a-spin/index.html',
   '/2018/02/27/start-using-jenkins-with-azure-in-5-minutes/index.html',
   '/2018/03/31/hugo-in-azure-blob-storage-part-2/index.html',
+  '/2018/04/15/ci/cd-with-hugo-and-azure/index.html',
   '/404.html',
   '/apple-touch-icon.png',
   '/categories/index.html',
@@ -44,9 +47,13 @@ var urlsToCache = [
   '/fonts/fontawesome-webfont.woff2',
   '/fonts/FontAwesome.otf',
   '/img/azjenkban.png',
+  '/img/cicd.jpg',
+  '/img/cicdban.png',
   '/img/helmban.png',
   '/img/hugoazure1.PNG',
   '/img/hugoazureban.png',
+  '/img/hugoazureban2.png',
+  '/img/icon-512x512.png',
   '/img/igniteban.png',
   '/img/ignitebanrecent.png',
   '/img/ignitedemo1.png',
@@ -67,6 +74,7 @@ var urlsToCache = [
   '/img/touch/icon-144x144.png',
   '/img/touch/icon-152x152.png',
   '/img/touch/icon-192x192.png',
+  '/img/touch/icon-512x512.png',
   '/index.html',
   '/index.xml',
   '/js/highlight.min.js',
@@ -74,7 +82,9 @@ var urlsToCache = [
   '/js/lazyload.min.js',
   '/js/script.js',
   '/js/site.js',
+  '/manifest.json',
   '/page/1/index.html',
+  '/page/2/index.html',
   '/page/aboutme/index.html',
   '/page/index.html',
   '/page/index.xml',
@@ -82,6 +92,7 @@ var urlsToCache = [
   '/post/index.html',
   '/post/index.xml',
   '/post/page/1/index.html',
+  '/post/page/2/index.html',
   '/sitemap.xml',
   '/tags/app-service/index.html',
   '/tags/app-service/index.xml',
@@ -114,6 +125,7 @@ var urlsToCache = [
   '/tags/terraform/page/1/index.html'
 ];
 
+//Cache all files in array before install is successful
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -123,18 +135,33 @@ self.addEventListener('install', function(event) {
   );  
 });
 
-self.addEventListener('activate', function(event) {
+//Clears out old caches
+self.addEventListener("activate", function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (CACHE_NAME !== cacheName &&  cacheName.startsWith("mfblog")) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
 });
 
-self.addEventListener('fetch', function(event) {
+//Cache, falling back to network with frequent updates
+self.addEventListener("fetch", function(event) {
   event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
+    caches.open("cache-name").then(function(cache) {
+      return cache.match(event.request).then(function(cachedResponse) {
+        var fetchPromise =
+          fetch(event.request).then(function(networkResponse) {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
+        return cachedResponse || fetchPromise;
+      })
+    })
   );
 });
