@@ -3,7 +3,7 @@
   "short_name": "MF Azure Blog",
   "display": "standalone",
   "start_url": "/",
-  "theme_color": "#A2BCDE",
+  "theme_color": "#38C6E8",
   "background_color": "#ffffff",
   "icons": [
     {
@@ -20,6 +20,11 @@
       "src": "img/touch/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "img/touch/icon-256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
     },
     {
       "src": "img/touch/icon-512x512.png",
