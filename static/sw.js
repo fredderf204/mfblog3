@@ -2,6 +2,7 @@ self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open('mfblog-v5').then(function (cache) {
       return cache.addAll([
+        '/',
         '/2017/01/02/starting-a-blog/index.html',
         '/2017/01/11/jenkins-on-azure-app-service/index.html',
         '/2017/01/21/hugo-in-azure-blob-storage/index.html',
