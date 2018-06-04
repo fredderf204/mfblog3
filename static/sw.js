@@ -1,10 +1,7 @@
-var CACHE_NAME = 'mfblog-v5';
-
 self.addEventListener('install', function (event) {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(function (cache) {
+    caches.open('mfblog-v5').then(function (cache) {
       return cache.addAll([
-        '/',
         '/2017/01/02/starting-a-blog/index.html',
         '/2017/01/11/jenkins-on-azure-app-service/index.html',
         '/2017/01/21/hugo-in-azure-blob-storage/index.html',
@@ -133,12 +130,15 @@ self.addEventListener('install', function (event) {
   );
 });
 
-self.addEventListener('activate', function (event) {
+self.addEventListener('activate', function(event) {
   event.waitUntil(
-    caches.keys().then(function (cacheNames) {
+    caches.keys().then(function(cacheNames) {
       return Promise.all(
-        cacheNames.filter(function (cacheName) {
-        }).map(function (cacheName) {
+        cacheNames.filter(function(cacheName) {
+          // Return true if you want to remove this cache,
+          // but remember that caches are shared across
+          // the whole origin
+        }).map(function(cacheName) {
           return caches.delete(cacheName);
         })
       );
@@ -148,8 +148,8 @@ self.addEventListener('activate', function (event) {
 
 self.addEventListener('fetch', function(event) {
   event.respondWith(
-    fetch(event.request).catch(function() {
-      return caches.match(event.request);
+    caches.match(event.request).then(function(response) {
+      return response || fetch(event.request);
     })
   );
 });
