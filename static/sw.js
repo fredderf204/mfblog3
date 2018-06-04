@@ -1,6 +1,6 @@
 self.addEventListener('install', function (event) {
   event.waitUntil(
-    caches.open('mfblog-v5').then(function (cache) {
+    caches.open('mfblog-v6').then(function (cache) {
       return cache.addAll([
         '/',
         '/2017/01/02/starting-a-blog/index.html',
