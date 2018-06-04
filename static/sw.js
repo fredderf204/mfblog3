@@ -131,18 +131,16 @@ self.addEventListener('install', function (event) {
   );
 });
 
-self.addEventListener('activate', function(event) {
+this.addEventListener('activate', function(event) {
+  var cacheWhitelist = ['mfblog-v6'];
+
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.filter(function(cacheName) {
-          // Return true if you want to remove this cache,
-          // but remember that caches are shared across
-          // the whole origin
-        }).map(function(cacheName) {
-          return caches.delete(cacheName);
-        })
-      );
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (cacheWhitelist.indexOf(key) === -1) {
+          return caches.delete(key);
+        }
+      }));
     })
   );
 });
