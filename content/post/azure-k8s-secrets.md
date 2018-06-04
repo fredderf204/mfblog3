@@ -3,7 +3,6 @@ banner = "img/hexban.png"
 bannerrecent = "img/hexban.png"
 date = "2018-05-01T13:36:11+10:00"
 description = ""
-draft = true
 images = []
 tags = ["Azure", "Kubernetes"]
 title = "K8s Secrets in Azure"
