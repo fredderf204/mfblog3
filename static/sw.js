@@ -16,7 +16,7 @@ self.addEventListener('install', function (event) {
         '/2018/02/27/start-using-jenkins-with-azure-in-5-minutes/index.html',
         '/2018/03/31/hugo-in-azure-blob-storage-part-2/index.html',
         '/2018/04/15/ci/cd-with-hugo-and-azure/index.html',
-        '/2018/05/01/k8s-secrets-in-azure/',
+        '/2018/05/01/k8s-secrets-in-azure/index.html',
         '/404.html',
         '/apple-touch-icon.png',
         '/categories/index.html',
