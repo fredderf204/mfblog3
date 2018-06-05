@@ -11,7 +11,7 @@ title = "K8s Secrets in Azure"
 TLDR
 ---
 
-I have always been very interested in how secrets get stored and injecting into K8s, have you :question: this article will show you one way to do it within Azure using [AKS](https://azure.microsoft.com/en-au/services/container-service/) , [Azure Key Vault](https://azure.microsoft.com/en-gb/services/key-vault/) and [Hexadite ACS Key Vault agent](https://github.com/Hexadite/acs-Key Vault-agent) :bowtie:
+I have always been very interested in how secrets get stored and injecting into K8s, have you :question: this article will show you one way to do it within Azure using [AKS](https://azure.microsoft.com/en-au/services/container-service/) , [Azure Key Vault](https://azure.microsoft.com/en-gb/services/key-vault/) and [Hexadite ACS Key Vault agent](https://github.com/Hexadite/acs-KeyVault-agent) :bowtie:
 
 :bulb: PS it looks like [KMS providers](https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/) might be the way forward here. But this feature is currently in alpha.
 
@@ -32,7 +32,7 @@ This was the key piece of the puzzle I was missing in imaging how this could wor
 Hexadite ACS Key Vault agent
 ---
 
-As per the [GitHub repo](https://github.com/Hexadite/acs-Key Vault-agent), the Hexadite ACS Key Vault agent does the following;
+As per the [GitHub repo](https://github.com/Hexadite/acs-KeyVault-agent), the Hexadite ACS Key Vault agent does the following;
 
 > * It runs before any other container as an init-container
 > * It connects to Azure Key Vault using the cluster's service principle
