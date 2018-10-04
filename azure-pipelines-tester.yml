@@ -1,0 +1,51 @@
+pool:
+  vmImage: 'Ubuntu 16.04'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '8.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    rm -rf public
+    hugo --baseURL https://stagingblog.mfriedrich.cloud/
+  displayName: 'Set up Hugo for staging build'
+
+- script: |
+    npm install --dev-only
+  displayName: 'npm install and build'
+
+- task: Grunt@0
+  inputs:
+    gruntFile: gruntfilestaging.js
+  displayName: 'Run Grunt'
+
+- task: AzureFileCopy@2
+  inputs:
+    sourcePath: $(Build.Repository.LocalPath)/public
+    azureConnectionType: ConnectedServiceNameARM
+    azureSubscription: fredderf
+    destination: azureBlob
+    storage: mfblog3
+    containerName: staging
+    resourceGroup: hugo
+  displayName: 'Copy files to Azure blob'
+
+### needs envs to work
+- task: AzureCLI@1
+  inputs:
+    azureSubscription:
+  displayName: 'Set Cache control settings on Azure blobs'
+
+### needs envs to work
+
+- script: |
+    node ./buildscripts/purgecdn.js
+  displayName: 'Purge Staging CDN'
+
+- task: ManualIntervention@8
+  inputs:
+    instructions: 'Yo, check out http://mfblobpremstg.azureedge.net/ to make sure it looks awesome :)'
+    emailRecipients: 'mifrie@microsoft.com'
+  displayName: 'Pause for Manual inspection of site'
