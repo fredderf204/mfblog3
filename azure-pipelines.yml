@@ -47,9 +47,3 @@ steps:
 - script: |
     node ./buildscripts/purgecdn.js
   displayName: 'Purge Staging CDN'
-
-- task: ManualIntervention@8
-  inputs:
-    instructions: 'Yo, check out http://mfblobpremstg.azureedge.net/ to make sure it looks awesome :)'
-    emailRecipients: 'mifrie@microsoft.com'
-  displayName: 'Pause for Manual inspection of site'
