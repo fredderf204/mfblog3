@@ -8,6 +8,10 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    apt-get install hugo
+  displayName: 'Install Hugo'
+
+- script: |
     rm -rf public
     hugo --baseURL https://stagingblog.mfriedrich.cloud/
   displayName: 'Set up Hugo for staging build'
